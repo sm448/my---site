@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>From My Heart ❤️</title>
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#ffdde1,#ee9ca7);
+    text-align: center;
+    padding: 30px;
+    color:#333;
+}
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+button {
+    padding: 12px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.yes { background: #4CAF50; color: white; }
+.no { background: #f44336; color: white; }
+.hidden { display: none; }
+p { font-size: 18px; line-height: 1.6; }
+</style>
+</head>
+
+<body>
+
+<div class="card" id="q1">
+<p><b>1. Chachi tumhe kuchh bolna hai, bol skta hu..? 💖</b></p>
+<button class="yes" onclick="q1yes()">Yes</button>
+<button class="no" onclick="q1no()">No</button>
+</div>
+
+<div class="card hidden" id="q2">
+<p><b>2. Abhi tak maine jo bhi aisa-vaisa bola uske liye sorry chachi, kya tum sorry accept kr skti ho..? 🙏</b></p>
+<button class="yes" onclick="q2yes()">Yes</button>
+<button class="no" onclick="q2no()">No</button>
+</div>
+
+<div class="card hidden" id="q3">
+<p><b>3. Agar aap meri chhoti si demand puri kar do to meri stress aur tension khatam ho jaye… 💞</b></p>
+<button class="yes" onclick="q3yes()">Yes</button>
+<button class="no" onclick="q3no()">No</button>
+</div>
+
+<div class="card hidden" id="result"></div>
+
+<script>
+function q1yes(){
+    document.getElementById("q1").classList.add("hidden");
+    document.getElementById("q2").classList.remove("hidden");
+    alert("Thank you so much my beautiful chachi ❤️");
+}
+function q1no(){
+    alert("Please haa bol do na please chachi 🥺");
+}
+
+function q2yes(){
+    document.getElementById("q2").classList.add("hidden");
+    document.getElementById("q3").classList.remove("hidden");
+}
+function q2no(){
+    alert("Please yes kar do na chachi 🙏");
+}
+
+function q3no(){
+    alert("Please chachi, jaruri hai… kr do na 🥺");
+}
+
+function q3yes(){
+    document.getElementById("q3").classList.add("hidden");
+    document.getElementById("result").classList.remove("hidden");
+    document.getElementById("result").innerHTML = `
+    <p><b>Meri kuchh promises tumhe ❤️</b></p>
+    <p>
+    1️⃣ Kabhi bhi life mein ladunga nahi.<br>
+    2️⃣ Hamesha tumhari baat manunga.<br>
+    3️⃣ Tum bolo sant – main sant, tum bolo kaam – main karunga 100%.<br>
+    4️⃣ Tumhara hukum sar aankhon par.<br><br>
+
+    🌸 Tum dil se bahut sundar ho chachi.<br>
+    👀 Tumhari aankhein sach mein bahut pyari hain.<br>
+    😊 Tumhari smile dekh kar lagta hai wow…<br>
+    👑 Saundarya ras ka best example ho tum.<br>
+    ✨ Pehle bhi achhi lagti thi, ab to princess lagti ho.<br>
+    🔥 Engineers ki language mein – perfect fit!<br><br>
+
+    👉 Agar aapne accept kar liya ho to please WhatsApp par sirf <b>YES</b> likh dena 💌
+    </p>`;
+}
+</script>
+
+</body>
+</html>
